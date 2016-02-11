@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		909180711C6D38BA008D3513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909180701C6D38BA008D3513 /* AppDelegate.swift */; };
+		909180731C6D38BA008D3513 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909180721C6D38BA008D3513 /* ViewController.swift */; };
+		909180751C6D38BA008D3513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 909180741C6D38BA008D3513 /* Assets.xcassets */; };
+		909180781C6D38BA008D3513 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909180761C6D38BA008D3513 /* Main.storyboard */; };
+		909180831C6D38BA008D3513 /* LSDmate_GUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909180821C6D38BA008D3513 /* LSDmate_GUITests.swift */; };
+		9091808E1C6D38BA008D3513 /* LSDmate_GUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9091808D1C6D38BA008D3513 /* LSDmate_GUIUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9091807F1C6D38BA008D3513 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 909180651C6D38BA008D3513 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9091806C1C6D38BA008D3513;
+			remoteInfo = "LSDmate-GUI";
+		};
+		9091808A1C6D38BA008D3513 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 909180651C6D38BA008D3513 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9091806C1C6D38BA008D3513;
+			remoteInfo = "LSDmate-GUI";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9091806D1C6D38BA008D3513 /* LSDmate-GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LSDmate-GUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		909180701C6D38BA008D3513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		909180721C6D38BA008D3513 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		909180741C6D38BA008D3513 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		909180771C6D38BA008D3513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		909180791C6D38BA008D3513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9091807E1C6D38BA008D3513 /* LSDmate-GUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LSDmate-GUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		909180821C6D38BA008D3513 /* LSDmate_GUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSDmate_GUITests.swift; sourceTree = "<group>"; };
+		909180841C6D38BA008D3513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		909180891C6D38BA008D3513 /* LSDmate-GUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LSDmate-GUIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9091808D1C6D38BA008D3513 /* LSDmate_GUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSDmate_GUIUITests.swift; sourceTree = "<group>"; };
+		9091808F1C6D38BA008D3513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9091806A1C6D38BA008D3513 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9091807B1C6D38BA008D3513 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909180861C6D38BA008D3513 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		909180641C6D38BA008D3513 = {
+			isa = PBXGroup;
+			children = (
+				9091806F1C6D38BA008D3513 /* LSDmate-GUI */,
+				909180811C6D38BA008D3513 /* LSDmate-GUITests */,
+				9091808C1C6D38BA008D3513 /* LSDmate-GUIUITests */,
+				9091806E1C6D38BA008D3513 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9091806E1C6D38BA008D3513 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9091806D1C6D38BA008D3513 /* LSDmate-GUI.app */,
+				9091807E1C6D38BA008D3513 /* LSDmate-GUITests.xctest */,
+				909180891C6D38BA008D3513 /* LSDmate-GUIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9091806F1C6D38BA008D3513 /* LSDmate-GUI */ = {
+			isa = PBXGroup;
+			children = (
+				909180701C6D38BA008D3513 /* AppDelegate.swift */,
+				909180721C6D38BA008D3513 /* ViewController.swift */,
+				909180741C6D38BA008D3513 /* Assets.xcassets */,
+				909180761C6D38BA008D3513 /* Main.storyboard */,
+				909180791C6D38BA008D3513 /* Info.plist */,
+			);
+			path = "LSDmate-GUI";
+			sourceTree = "<group>";
+		};
+		909180811C6D38BA008D3513 /* LSDmate-GUITests */ = {
+			isa = PBXGroup;
+			children = (
+				909180821C6D38BA008D3513 /* LSDmate_GUITests.swift */,
+				909180841C6D38BA008D3513 /* Info.plist */,
+			);
+			path = "LSDmate-GUITests";
+			sourceTree = "<group>";
+		};
+		9091808C1C6D38BA008D3513 /* LSDmate-GUIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9091808D1C6D38BA008D3513 /* LSDmate_GUIUITests.swift */,
+				9091808F1C6D38BA008D3513 /* Info.plist */,
+			);
+			path = "LSDmate-GUIUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9091806C1C6D38BA008D3513 /* LSDmate-GUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 909180921C6D38BA008D3513 /* Build configuration list for PBXNativeTarget "LSDmate-GUI" */;
+			buildPhases = (
+				909180691C6D38BA008D3513 /* Sources */,
+				9091806A1C6D38BA008D3513 /* Frameworks */,
+				9091806B1C6D38BA008D3513 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LSDmate-GUI";
+			productName = "LSDmate-GUI";
+			productReference = 9091806D1C6D38BA008D3513 /* LSDmate-GUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9091807D1C6D38BA008D3513 /* LSDmate-GUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 909180951C6D38BA008D3513 /* Build configuration list for PBXNativeTarget "LSDmate-GUITests" */;
+			buildPhases = (
+				9091807A1C6D38BA008D3513 /* Sources */,
+				9091807B1C6D38BA008D3513 /* Frameworks */,
+				9091807C1C6D38BA008D3513 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				909180801C6D38BA008D3513 /* PBXTargetDependency */,
+			);
+			name = "LSDmate-GUITests";
+			productName = "LSDmate-GUITests";
+			productReference = 9091807E1C6D38BA008D3513 /* LSDmate-GUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		909180881C6D38BA008D3513 /* LSDmate-GUIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 909180981C6D38BA008D3513 /* Build configuration list for PBXNativeTarget "LSDmate-GUIUITests" */;
+			buildPhases = (
+				909180851C6D38BA008D3513 /* Sources */,
+				909180861C6D38BA008D3513 /* Frameworks */,
+				909180871C6D38BA008D3513 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9091808B1C6D38BA008D3513 /* PBXTargetDependency */,
+			);
+			name = "LSDmate-GUIUITests";
+			productName = "LSDmate-GUIUITests";
+			productReference = 909180891C6D38BA008D3513 /* LSDmate-GUIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		909180651C6D38BA008D3513 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Esben von Buchwald";
+				TargetAttributes = {
+					9091806C1C6D38BA008D3513 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					9091807D1C6D38BA008D3513 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 9091806C1C6D38BA008D3513;
+					};
+					909180881C6D38BA008D3513 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 9091806C1C6D38BA008D3513;
+					};
+				};
+			};
+			buildConfigurationList = 909180681C6D38BA008D3513 /* Build configuration list for PBXProject "LSDmate-GUI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 909180641C6D38BA008D3513;
+			productRefGroup = 9091806E1C6D38BA008D3513 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9091806C1C6D38BA008D3513 /* LSDmate-GUI */,
+				9091807D1C6D38BA008D3513 /* LSDmate-GUITests */,
+				909180881C6D38BA008D3513 /* LSDmate-GUIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9091806B1C6D38BA008D3513 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				909180751C6D38BA008D3513 /* Assets.xcassets in Resources */,
+				909180781C6D38BA008D3513 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9091807C1C6D38BA008D3513 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909180871C6D38BA008D3513 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		909180691C6D38BA008D3513 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				909180731C6D38BA008D3513 /* ViewController.swift in Sources */,
+				909180711C6D38BA008D3513 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9091807A1C6D38BA008D3513 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				909180831C6D38BA008D3513 /* LSDmate_GUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909180851C6D38BA008D3513 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9091808E1C6D38BA008D3513 /* LSDmate_GUIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		909180801C6D38BA008D3513 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9091806C1C6D38BA008D3513 /* LSDmate-GUI */;
+			targetProxy = 9091807F1C6D38BA008D3513 /* PBXContainerItemProxy */;
+		};
+		9091808B1C6D38BA008D3513 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9091806C1C6D38BA008D3513 /* LSDmate-GUI */;
+			targetProxy = 9091808A1C6D38BA008D3513 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		909180761C6D38BA008D3513 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				909180771C6D38BA008D3513 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		909180901C6D38BA008D3513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		909180911C6D38BA008D3513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		909180931C6D38BA008D3513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "LSDmate-GUI/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.vonbuchwald.esben.LSDmate-GUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		909180941C6D38BA008D3513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "LSDmate-GUI/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.vonbuchwald.esben.LSDmate-GUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		909180961C6D38BA008D3513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "LSDmate-GUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.vonbuchwald.esben.LSDmate-GUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LSDmate-GUI.app/Contents/MacOS/LSDmate-GUI";
+			};
+			name = Debug;
+		};
+		909180971C6D38BA008D3513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "LSDmate-GUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.vonbuchwald.esben.LSDmate-GUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LSDmate-GUI.app/Contents/MacOS/LSDmate-GUI";
+			};
+			name = Release;
+		};
+		909180991C6D38BA008D3513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "LSDmate-GUIUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.vonbuchwald.esben.LSDmate-GUIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "LSDmate-GUI";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		9091809A1C6D38BA008D3513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "LSDmate-GUIUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dk.vonbuchwald.esben.LSDmate-GUIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "LSDmate-GUI";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		909180681C6D38BA008D3513 /* Build configuration list for PBXProject "LSDmate-GUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				909180901C6D38BA008D3513 /* Debug */,
+				909180911C6D38BA008D3513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		909180921C6D38BA008D3513 /* Build configuration list for PBXNativeTarget "LSDmate-GUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				909180931C6D38BA008D3513 /* Debug */,
+				909180941C6D38BA008D3513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		909180951C6D38BA008D3513 /* Build configuration list for PBXNativeTarget "LSDmate-GUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				909180961C6D38BA008D3513 /* Debug */,
+				909180971C6D38BA008D3513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		909180981C6D38BA008D3513 /* Build configuration list for PBXNativeTarget "LSDmate-GUIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				909180991C6D38BA008D3513 /* Debug */,
+				9091809A1C6D38BA008D3513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 909180651C6D38BA008D3513 /* Project object */;
+}
