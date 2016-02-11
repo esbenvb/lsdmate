@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		909180351C6D3812008D3513 /* LSDmate.h in Headers */ = {isa = PBXBuildFile; fileRef = 909180341C6D3812008D3513 /* LSDmate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9091803C1C6D3812008D3513 /* LSDmate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909180311C6D3812008D3513 /* LSDmate.framework */; };
+		909180411C6D3812008D3513 /* LSDmateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909180401C6D3812008D3513 /* LSDmateTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9091803D1C6D3812008D3513 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 909180281C6D3812008D3513 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 909180301C6D3812008D3513;
+			remoteInfo = LSDmate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		909180311C6D3812008D3513 /* LSDmate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LSDmate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		909180341C6D3812008D3513 /* LSDmate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSDmate.h; sourceTree = "<group>"; };
+		909180361C6D3812008D3513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9091803B1C6D3812008D3513 /* LSDmateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LSDmateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		909180401C6D3812008D3513 /* LSDmateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSDmateTests.swift; sourceTree = "<group>"; };
+		909180421C6D3812008D3513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9091802D1C6D3812008D3513 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909180381C6D3812008D3513 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9091803C1C6D3812008D3513 /* LSDmate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		909180271C6D3812008D3513 = {
+			isa = PBXGroup;
+			children = (
+				909180331C6D3812008D3513 /* LSDmate */,
+				9091803F1C6D3812008D3513 /* LSDmateTests */,
+				909180321C6D3812008D3513 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		909180321C6D3812008D3513 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				909180311C6D3812008D3513 /* LSDmate.framework */,
+				9091803B1C6D3812008D3513 /* LSDmateTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		909180331C6D3812008D3513 /* LSDmate */ = {
+			isa = PBXGroup;
+			children = (
+				909180341C6D3812008D3513 /* LSDmate.h */,
+				909180361C6D3812008D3513 /* Info.plist */,
+			);
+			path = LSDmate;
+			sourceTree = "<group>";
+		};
+		9091803F1C6D3812008D3513 /* LSDmateTests */ = {
+			isa = PBXGroup;
+			children = (
+				909180401C6D3812008D3513 /* LSDmateTests.swift */,
+				909180421C6D3812008D3513 /* Info.plist */,
+			);
+			path = LSDmateTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9091802E1C6D3812008D3513 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				909180351C6D3812008D3513 /* LSDmate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		909180301C6D3812008D3513 /* LSDmate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 909180451C6D3812008D3513 /* Build configuration list for PBXNativeTarget "LSDmate" */;
+			buildPhases = (
+				9091802C1C6D3812008D3513 /* Sources */,
+				9091802D1C6D3812008D3513 /* Frameworks */,
+				9091802E1C6D3812008D3513 /* Headers */,
+				9091802F1C6D3812008D3513 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LSDmate;
+			productName = LSDmate;
+			productReference = 909180311C6D3812008D3513 /* LSDmate.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9091803A1C6D3812008D3513 /* LSDmateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 909180481C6D3812008D3513 /* Build configuration list for PBXNativeTarget "LSDmateTests" */;
+			buildPhases = (
+				909180371C6D3812008D3513 /* Sources */,
+				909180381C6D3812008D3513 /* Frameworks */,
+				909180391C6D3812008D3513 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9091803E1C6D3812008D3513 /* PBXTargetDependency */,
+			);
+			name = LSDmateTests;
+			productName = LSDmateTests;
+			productReference = 9091803B1C6D3812008D3513 /* LSDmateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		909180281C6D3812008D3513 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Esben von Buchwald";
+				TargetAttributes = {
+					909180301C6D3812008D3513 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					9091803A1C6D3812008D3513 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 9091802B1C6D3812008D3513 /* Build configuration list for PBXProject "LSDmate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 909180271C6D3812008D3513;
+			productRefGroup = 909180321C6D3812008D3513 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				909180301C6D3812008D3513 /* LSDmate */,
+				9091803A1C6D3812008D3513 /* LSDmateTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9091802F1C6D3812008D3513 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909180391C6D3812008D3513 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9091802C1C6D3812008D3513 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		909180371C6D3812008D3513 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				909180411C6D3812008D3513 /* LSDmateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9091803E1C6D3812008D3513 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 909180301C6D3812008D3513 /* LSDmate */;
+			targetProxy = 9091803D1C6D3812008D3513 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		909180431C6D3812008D3513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		909180441C6D3812008D3513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		909180461C6D3812008D3513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = LSDmate/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dk.vonbuchwald.esben.LSDmate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		909180471C6D3812008D3513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = LSDmate/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dk.vonbuchwald.esben.LSDmate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		909180491C6D3812008D3513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LSDmateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dk.vonbuchwald.esben.LSDmateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9091804A1C6D3812008D3513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = LSDmateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dk.vonbuchwald.esben.LSDmateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9091802B1C6D3812008D3513 /* Build configuration list for PBXProject "LSDmate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				909180431C6D3812008D3513 /* Debug */,
+				909180441C6D3812008D3513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		909180451C6D3812008D3513 /* Build configuration list for PBXNativeTarget "LSDmate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				909180461C6D3812008D3513 /* Debug */,
+				909180471C6D3812008D3513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		909180481C6D3812008D3513 /* Build configuration list for PBXNativeTarget "LSDmateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				909180491C6D3812008D3513 /* Debug */,
+				9091804A1C6D3812008D3513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 909180281C6D3812008D3513 /* Project object */;
+}
