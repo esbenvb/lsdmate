@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "909180301C6D3812008D3513"
-               BuildableName = "LSDmate.framework"
-               BlueprintName = "LSDmate"
-               ReferencedContainer = "container:LSDmate.xcodeproj">
+               BlueprintIdentifier = "909181141C6D3979008D3513"
+               BuildableName = "LSDmate-CLI"
+               BlueprintName = "LSDmate-CLI"
+               ReferencedContainer = "container:LSDmate-CLI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,24 +28,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9091803A1C6D3812008D3513"
-               BuildableName = "LSDmateTests.xctest"
-               BlueprintName = "LSDmateTests"
-               ReferencedContainer = "container:LSDmate.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "909180301C6D3812008D3513"
-            BuildableName = "LSDmate.framework"
-            BlueprintName = "LSDmate"
-            ReferencedContainer = "container:LSDmate.xcodeproj">
+            BlueprintIdentifier = "909181141C6D3979008D3513"
+            BuildableName = "LSDmate-CLI"
+            BlueprintName = "LSDmate-CLI"
+            ReferencedContainer = "container:LSDmate-CLI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -61,15 +51,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "909180301C6D3812008D3513"
-            BuildableName = "LSDmate.framework"
-            BlueprintName = "LSDmate"
-            ReferencedContainer = "container:LSDmate.xcodeproj">
+            BlueprintIdentifier = "909181141C6D3979008D3513"
+            BuildableName = "LSDmate-CLI"
+            BlueprintName = "LSDmate-CLI"
+            ReferencedContainer = "container:LSDmate-CLI.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -79,15 +70,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "909180301C6D3812008D3513"
-            BuildableName = "LSDmate.framework"
-            BlueprintName = "LSDmate"
-            ReferencedContainer = "container:LSDmate.xcodeproj">
+            BlueprintIdentifier = "909181141C6D3979008D3513"
+            BuildableName = "LSDmate-CLI"
+            BlueprintName = "LSDmate-CLI"
+            ReferencedContainer = "container:LSDmate-CLI.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

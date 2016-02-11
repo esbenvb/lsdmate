@@ -20,6 +20,13 @@
 			remoteGlobalIDString = 909180301C6D3812008D3513;
 			remoteInfo = LSDmate;
 		};
+		909180621C6D3896008D3513 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9091805E1C6D3895008D3513 /* LSDmate-CLI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 909180541C6D3895008D3513;
+			remoteInfo = "LSDmate-CLI";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +36,7 @@
 		9091803B1C6D3812008D3513 /* LSDmateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LSDmateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		909180401C6D3812008D3513 /* LSDmateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSDmateTests.swift; sourceTree = "<group>"; };
 		909180421C6D3812008D3513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9091805E1C6D3895008D3513 /* LSDmate-CLI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "LSDmate-CLI.xcodeproj"; path = "LSDmate-CLI/LSDmate-CLI.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,7 @@
 		909180271C6D3812008D3513 = {
 			isa = PBXGroup;
 			children = (
+				9091805E1C6D3895008D3513 /* LSDmate-CLI.xcodeproj */,
 				909180331C6D3812008D3513 /* LSDmate */,
 				9091803F1C6D3812008D3513 /* LSDmateTests */,
 				909180321C6D3812008D3513 /* Products */,
@@ -84,6 +93,14 @@
 				909180421C6D3812008D3513 /* Info.plist */,
 			);
 			path = LSDmateTests;
+			sourceTree = "<group>";
+		};
+		9091805F1C6D3895008D3513 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				909180631C6D3896008D3513 /* LSDmate-CLI */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +181,12 @@
 			mainGroup = 909180271C6D3812008D3513;
 			productRefGroup = 909180321C6D3812008D3513 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9091805F1C6D3895008D3513 /* Products */;
+					ProjectRef = 9091805E1C6D3895008D3513 /* LSDmate-CLI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				909180301C6D3812008D3513 /* LSDmate */,
@@ -171,6 +194,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		909180631C6D3896008D3513 /* LSDmate-CLI */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "LSDmate-CLI";
+			remoteRef = 909180621C6D3896008D3513 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9091802F1C6D3812008D3513 /* Resources */ = {
@@ -379,6 +412,7 @@
 				909180471C6D3812008D3513 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		909180481C6D3812008D3513 /* Build configuration list for PBXNativeTarget "LSDmateTests" */ = {
 			isa = XCConfigurationList;
@@ -387,6 +421,7 @@
 				9091804A1C6D3812008D3513 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

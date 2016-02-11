@@ -4,25 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LSDmate-GUI.xcscheme</key>
+		<key>LSDmate-CLI.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>909180DA1C6D3960008D3513</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>909180EE1C6D3960008D3513</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>909180F91C6D3960008D3513</key>
+		<key>909181141C6D3979008D3513</key>
 		<dict>
 			<key>primary</key>
 			<true/>
