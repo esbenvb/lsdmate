@@ -107,30 +107,21 @@ func enableBlockedHosts() {
     }
 }
 
-enum ScanHostsFileState: Int {
-    case Inside
-    case Outside
-}
 
 func disableBlockedHosts() {
     do {
         let  hostsFileLines = try readHostsFile()
         var newLines: [String] = []
-        var state = ScanHostsFileState.Outside
+        var inBlock = false
         for line in hostsFileLines {
             switch line {
             case STARTSIGNATURE:
-                state = .Inside
-                
+                inBlock = true
             case ENDSIGNATURE:
-                state = .Outside
-                
+                inBlock = false
             default:
-                switch(state) {
-                case .Outside:
+                if !inBlock {
                     newLines.append(line)
-                default:
-                    continue
                 }
             }
         }
@@ -191,11 +182,11 @@ func stopWorking() {
     exit(0)
 }
 
-func addHosts(var args: [String]) {
+func addHosts(args: [String]) {
     do {
         let hosts = try readConfigFile()
-        args = args.filter {hosts.indexOf($0) == nil}
-        try writeConfigFile(hosts + args)
+        let newContent = Array(Set(hosts).union(args))
+        try writeConfigFile(newContent)
         print("Added \(args.count) hosts.")
     }
     catch ErrorCodes.ConfigFileNotFound {
@@ -210,10 +201,10 @@ func addHosts(var args: [String]) {
 
 func removeHosts(args: [String]) {
     do {
-        var hosts = try readConfigFile()
+        let hosts = try readConfigFile()
         let origLength = hosts.count
-        hosts = hosts.filter {args.indexOf($0) == nil}
-        try writeConfigFile(hosts )
+        let newContent = Array(Set(hosts).subtract(args))
+        try writeConfigFile(newContent)
         print("Removed \(origLength - hosts.count) hosts.")
     }
     catch ErrorCodes.ConfigFileNotFound {
