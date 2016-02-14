@@ -8,14 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		909181191C6D3979008D3513 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909181181C6D3979008D3513 /* main.swift */; };
+		909BED731C713C2F00DB9F45 /* FileHosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BED6B1C713C2F00DB9F45 /* FileHosts.swift */; };
+		909BED741C713C2F00DB9F45 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BED6C1C713C2F00DB9F45 /* File.swift */; };
+		909BED751C713C2F00DB9F45 /* FileConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BED6D1C713C2F00DB9F45 /* FileConfig.swift */; };
+		909BED761C713C2F00DB9F45 /* ErrorTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BED6E1C713C2F00DB9F45 /* ErrorTypeEnum.swift */; };
+		909BED771C713C2F00DB9F45 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BED6F1C713C2F00DB9F45 /* Configuration.swift */; };
+		909BED781C713C2F00DB9F45 /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BED701C713C2F00DB9F45 /* Signature.swift */; };
+		909BED791C713C2F00DB9F45 /* LSDmate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BED711C713C2F00DB9F45 /* LSDmate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		909181131C6D3979008D3513 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = usr/share/man/man1;
+			dstSubfolderSpec = 10;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
@@ -25,6 +32,15 @@
 /* Begin PBXFileReference section */
 		909181151C6D3979008D3513 /* LSDmate-CLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "LSDmate-CLI"; sourceTree = BUILT_PRODUCTS_DIR; };
 		909181181C6D3979008D3513 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		909BED691C713C2F00DB9F45 /* LSDmate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSDmate.h; sourceTree = "<group>"; };
+		909BED6A1C713C2F00DB9F45 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		909BED6B1C713C2F00DB9F45 /* FileHosts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHosts.swift; sourceTree = "<group>"; };
+		909BED6C1C713C2F00DB9F45 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		909BED6D1C713C2F00DB9F45 /* FileConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileConfig.swift; sourceTree = "<group>"; };
+		909BED6E1C713C2F00DB9F45 /* ErrorTypeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTypeEnum.swift; sourceTree = "<group>"; };
+		909BED6F1C713C2F00DB9F45 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		909BED701C713C2F00DB9F45 /* Signature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
+		909BED711C713C2F00DB9F45 /* LSDmate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSDmate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +73,27 @@
 		909181171C6D3979008D3513 /* LSDmate-CLI */ = {
 			isa = PBXGroup;
 			children = (
+				909BED721C713C2F00DB9F45 /* LSDmate */,
 				909181181C6D3979008D3513 /* main.swift */,
 			);
 			path = "LSDmate-CLI";
+			sourceTree = "<group>";
+		};
+		909BED721C713C2F00DB9F45 /* LSDmate */ = {
+			isa = PBXGroup;
+			children = (
+				909BED691C713C2F00DB9F45 /* LSDmate.h */,
+				909BED6A1C713C2F00DB9F45 /* Info.plist */,
+				909BED6B1C713C2F00DB9F45 /* FileHosts.swift */,
+				909BED6C1C713C2F00DB9F45 /* File.swift */,
+				909BED6D1C713C2F00DB9F45 /* FileConfig.swift */,
+				909BED6E1C713C2F00DB9F45 /* ErrorTypeEnum.swift */,
+				909BED6F1C713C2F00DB9F45 /* Configuration.swift */,
+				909BED701C713C2F00DB9F45 /* Signature.swift */,
+				909BED711C713C2F00DB9F45 /* LSDmate.swift */,
+			);
+			name = LSDmate;
+			path = ../LSDmate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +156,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909BED771C713C2F00DB9F45 /* Configuration.swift in Sources */,
+				909BED761C713C2F00DB9F45 /* ErrorTypeEnum.swift in Sources */,
+				909BED791C713C2F00DB9F45 /* LSDmate.swift in Sources */,
+				909BED781C713C2F00DB9F45 /* Signature.swift in Sources */,
 				909181191C6D3979008D3513 /* main.swift in Sources */,
+				909BED751C713C2F00DB9F45 /* FileConfig.swift in Sources */,
+				909BED741C713C2F00DB9F45 /* File.swift in Sources */,
+				909BED731C713C2F00DB9F45 /* FileHosts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +192,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "/Users/esben/Dropbox/LSDmate/**";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -196,7 +237,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "/Users/esben/Dropbox/LSDmate/**";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -214,7 +255,6 @@
 		9091811D1C6D3979008D3513 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "/Users/esben/Dropbox/LSDmate/**";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -222,8 +262,6 @@
 		9091811E1C6D3979008D3513 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "/Users/esben/Dropbox/LSDmate/**";
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

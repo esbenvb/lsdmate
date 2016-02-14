@@ -17,15 +17,14 @@ class FileConfig: File {
         let hosts = try readToArray()
         let newContent = Array(Set(hosts).union(args))
         try writeFromArray(newContent)
-        return args.count
+        return newContent.count - hosts.count
     }
     
     func removeHosts(args: [String]) throws -> Int {
         let hosts = try readToArray()
-        let origLength = hosts.count
         let newContent = Array(Set(hosts).subtract(args))
         try writeFromArray(newContent)
-        return (origLength - hosts.count)
+        return hosts.count - newContent.count
     }
     
     func listHosts() throws -> [String]  {

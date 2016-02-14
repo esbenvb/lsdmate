@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:LSDmate-CLI/LSDmate-CLI.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:LSDmate-GUI/LSDmate-GUI.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:LSDmate.xcodeproj">
    </FileRef>
 </Workspace>
