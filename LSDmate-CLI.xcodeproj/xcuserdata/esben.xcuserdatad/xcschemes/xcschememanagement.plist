@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>LSDmate-CLI-demo.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>LSDmate-CLI.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>909181141C6D3979008D3513</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>90F73F691C7004DE003815AC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

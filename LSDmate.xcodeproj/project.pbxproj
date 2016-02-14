@@ -10,6 +10,13 @@
 		909180351C6D3812008D3513 /* LSDmate.h in Headers */ = {isa = PBXBuildFile; fileRef = 909180341C6D3812008D3513 /* LSDmate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9091803C1C6D3812008D3513 /* LSDmate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909180311C6D3812008D3513 /* LSDmate.framework */; };
 		909180411C6D3812008D3513 /* LSDmateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909180401C6D3812008D3513 /* LSDmateTests.swift */; };
+		909181201C6E8619008D3513 /* FileHosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9091811F1C6E8619008D3513 /* FileHosts.swift */; };
+		909181221C6E8640008D3513 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909181211C6E8640008D3513 /* File.swift */; };
+		909181241C6E866A008D3513 /* FileConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909181231C6E866A008D3513 /* FileConfig.swift */; };
+		909181281C6E8A9F008D3513 /* ErrorTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909181271C6E8A9F008D3513 /* ErrorTypeEnum.swift */; };
+		9091812A1C6E8BD3008D3513 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909181291C6E8BD3008D3513 /* Configuration.swift */; };
+		9091812C1C6E8E3E008D3513 /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9091812B1C6E8E3E008D3513 /* Signature.swift */; };
+		9091812E1C6EA2B0008D3513 /* LSDmate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9091812D1C6EA2B0008D3513 /* LSDmate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,13 +27,6 @@
 			remoteGlobalIDString = 909180301C6D3812008D3513;
 			remoteInfo = LSDmate;
 		};
-		909180621C6D3896008D3513 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9091805E1C6D3895008D3513 /* LSDmate-CLI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 909180541C6D3895008D3513;
-			remoteInfo = "LSDmate-CLI";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +36,13 @@
 		9091803B1C6D3812008D3513 /* LSDmateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LSDmateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		909180401C6D3812008D3513 /* LSDmateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSDmateTests.swift; sourceTree = "<group>"; };
 		909180421C6D3812008D3513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9091805E1C6D3895008D3513 /* LSDmate-CLI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "LSDmate-CLI.xcodeproj"; path = "LSDmate-CLI/LSDmate-CLI.xcodeproj"; sourceTree = "<group>"; };
+		9091811F1C6E8619008D3513 /* FileHosts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHosts.swift; sourceTree = "<group>"; };
+		909181211C6E8640008D3513 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		909181231C6E866A008D3513 /* FileConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileConfig.swift; sourceTree = "<group>"; };
+		909181271C6E8A9F008D3513 /* ErrorTypeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTypeEnum.swift; sourceTree = "<group>"; };
+		909181291C6E8BD3008D3513 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		9091812B1C6E8E3E008D3513 /* Signature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
+		9091812D1C6EA2B0008D3513 /* LSDmate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSDmate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +67,6 @@
 		909180271C6D3812008D3513 = {
 			isa = PBXGroup;
 			children = (
-				9091805E1C6D3895008D3513 /* LSDmate-CLI.xcodeproj */,
 				909180331C6D3812008D3513 /* LSDmate */,
 				9091803F1C6D3812008D3513 /* LSDmateTests */,
 				909180321C6D3812008D3513 /* Products */,
@@ -82,6 +87,13 @@
 			children = (
 				909180341C6D3812008D3513 /* LSDmate.h */,
 				909180361C6D3812008D3513 /* Info.plist */,
+				9091811F1C6E8619008D3513 /* FileHosts.swift */,
+				909181211C6E8640008D3513 /* File.swift */,
+				909181231C6E866A008D3513 /* FileConfig.swift */,
+				909181271C6E8A9F008D3513 /* ErrorTypeEnum.swift */,
+				909181291C6E8BD3008D3513 /* Configuration.swift */,
+				9091812B1C6E8E3E008D3513 /* Signature.swift */,
+				9091812D1C6EA2B0008D3513 /* LSDmate.swift */,
 			);
 			path = LSDmate;
 			sourceTree = "<group>";
@@ -93,14 +105,6 @@
 				909180421C6D3812008D3513 /* Info.plist */,
 			);
 			path = LSDmateTests;
-			sourceTree = "<group>";
-		};
-		9091805F1C6D3895008D3513 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				909180631C6D3896008D3513 /* LSDmate-CLI */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,12 +185,6 @@
 			mainGroup = 909180271C6D3812008D3513;
 			productRefGroup = 909180321C6D3812008D3513 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 9091805F1C6D3895008D3513 /* Products */;
-					ProjectRef = 9091805E1C6D3895008D3513 /* LSDmate-CLI.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				909180301C6D3812008D3513 /* LSDmate */,
@@ -194,16 +192,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		909180631C6D3896008D3513 /* LSDmate-CLI */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = "LSDmate-CLI";
-			remoteRef = 909180621C6D3896008D3513 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9091802F1C6D3812008D3513 /* Resources */ = {
@@ -227,6 +215,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9091812A1C6E8BD3008D3513 /* Configuration.swift in Sources */,
+				909181281C6E8A9F008D3513 /* ErrorTypeEnum.swift in Sources */,
+				9091812E1C6EA2B0008D3513 /* LSDmate.swift in Sources */,
+				9091812C1C6E8E3E008D3513 /* Signature.swift in Sources */,
+				909181241C6E866A008D3513 /* FileConfig.swift in Sources */,
+				909181201C6E8619008D3513 /* FileHosts.swift in Sources */,
+				909181221C6E8640008D3513 /* File.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +265,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -317,6 +313,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -338,6 +335,7 @@
 		909180461C6D3812008D3513 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -350,12 +348,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dk.vonbuchwald.esben.LSDmate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		909180471C6D3812008D3513 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

@@ -7,158 +7,33 @@
 //
 
 import Foundation
+import LSDmate
 
-enum ErrorCodes: ErrorType {
+enum Errors: ErrorType {
+    case InvalidArguments
     case MissingContentArguments
-    case HostsFileNotFound
-    case HostsFileWrite
-    case FileReadError
-    case ConfigFileNotFound
-    case ConfigFileWrite
 }
 
-let HOSTFILEPATH = "/Users/esben/etc/hosts"
-let BLOCKIP = "127.0.0.1"
-let BLOCKEDFILEPATH = "/Users/esben/.blockedhosts"
-let STARTSIGNATURE = "#GSD-LSD hosts START"
-let ENDSIGNATURE = "#GSD-LSD hosts END"
+let lsdmate = LSDmate()
 
-func readFileToArray(filePath: String) throws -> [String]
-{
-    do {
-        let fileContent = try String(contentsOfFile: filePath, encoding: NSUTF8StringEncoding)
-        let lines = fileContent.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
-        var trimmedLines = lines.map({ $0.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()) })
-        trimmedLines = trimmedLines.filter {$0.characters.count > 0}
-        return trimmedLines
-    } catch  {
-        throw ErrorCodes.FileReadError
-    }
-}
-
-func readHostsFile() throws -> [String] {
-    do {
-        return try readFileToArray(HOSTFILEPATH)
-    } catch  {
-        throw ErrorCodes.HostsFileNotFound
-    }
-}
-
-func readConfigFile() throws -> [String] {
-    do {
-        return try readFileToArray(BLOCKEDFILEPATH)
-    } catch  {
-        throw ErrorCodes.ConfigFileNotFound
-    }
-}
-
-func writeConfigFile(hosts: [String]) throws {
-    let fileContent = hosts.joinWithSeparator("\n")
-    do {
-        try fileContent.writeToFile(BLOCKEDFILEPATH, atomically: true, encoding: NSUTF8StringEncoding)
-    }
-    catch {
-        throw ErrorCodes.ConfigFileWrite
-    }
-}
-
-func writeHostsFile(lines: [String]) throws {
-    let fileContent = lines.joinWithSeparator("\n")
-    do {
-        try fileContent.writeToFile(HOSTFILEPATH, atomically: true, encoding: NSUTF8StringEncoding)
-    }
-    catch {
-        throw ErrorCodes.HostsFileWrite
-    }
-}
-
-func listHosts() {
-    do {
-        let hosts = try readConfigFile()
-        for host in hosts {
-            print(host)
-        }
-    } catch  ErrorCodes.ConfigFileNotFound {
-        print("No hosts defined yet")
-        exit(0)
-    }
-    catch {
-        print ("ERROR")
-        exit(0)
-    }
-}
-
-func enableBlockedHosts() {
-    do {
-        disableBlockedHosts()
-        let hostsFileLines = try readHostsFile()
-        let hosts = try readConfigFile()
-        let newLines = [
-            STARTSIGNATURE,
-            "\(BLOCKIP) \(hosts.joinWithSeparator(" "))",
-            ENDSIGNATURE,
-        ]
-        try writeHostsFile(hostsFileLines + newLines)
-        
-    }
-    catch {
-        print("ERROR")
-        exit(1)
-    }
-}
-
-
-func disableBlockedHosts() {
-    do {
-        let  hostsFileLines = try readHostsFile()
-        var newLines: [String] = []
-        var inBlock = false
-        for line in hostsFileLines {
-            switch line {
-            case STARTSIGNATURE:
-                inBlock = true
-            case ENDSIGNATURE:
-                inBlock = false
-            default:
-                if !inBlock {
-                    newLines.append(line)
-                }
-            }
-        }
-        try writeHostsFile(newLines)
-    }
-    catch {
-        print("ERROR")
-        exit(1)
+func listHosts() throws {
+    let hosts = try lsdmate.listHosts()
+    print("Blocked hosts:")
+    for host in hosts {
+        print(host)
     }
 }
 
 func showHelp() {
-    print ("help:")
+    print ("Usage:")
+    print ("lsdmate status | start/work | stop/play ")
+    print ("Configuration:")
+    print ("lsdmate list | add host1 [host2, host3] | remove host1 [host2, host3] ")
     exit(0)
 }
 
-enum Status {
-    case On
-    case Off
-}
-
-func getStatus() -> Status {
-    do {
-        let hostsFileLines = try readHostsFile()
-        if hostsFileLines.indexOf(STARTSIGNATURE) != nil {
-            return .On
-        }
-        return .Off
-    }
-    catch {
-        print("ERROR")
-        exit(0)
-    }
-}
-
-func showStatus() {
-    let status = getStatus()
+func showStatus() throws {
+    let status = try lsdmate.status()
     switch status {
     case .On:
         print ("Enabled - you are working")
@@ -166,55 +41,28 @@ func showStatus() {
         print("Disabled - you are playing")
         
     }
-    print ("status:")
-    exit(0)
 }
 
-func startWorking() {
-    print("working")
-    enableBlockedHosts()
-    exit(0)
+func startWorking() throws  {
+    try lsdmate.enable()
+    print("Working")
 }
 
-func stopWorking() {
-    print("playing")
-    disableBlockedHosts()
-    exit(0)
+func stopWorking() throws {
+    try lsdmate.disable()
+    print("Playing")
 }
 
-func addHosts(args: [String]) {
-    do {
-        let hosts = try readConfigFile()
-        let newContent = Array(Set(hosts).union(args))
-        try writeConfigFile(newContent)
-        print("Added \(args.count) hosts.")
-    }
-    catch ErrorCodes.ConfigFileNotFound {
-        print("Config file not found")
-        exit(1)
-    }
-    catch {
-        print("ERROR")
-        exit(1)
-    }
+func addHosts() throws {
+    let args = try getRemainingArgs()
+    let added = try lsdmate.addHosts(args)
+    print ("Added \(added) hosts")
 }
 
-func removeHosts(args: [String]) {
-    do {
-        let hosts = try readConfigFile()
-        let origLength = hosts.count
-        let newContent = Array(Set(hosts).subtract(args))
-        try writeConfigFile(newContent)
-        print("Removed \(origLength - hosts.count) hosts.")
-    }
-    catch ErrorCodes.ConfigFileNotFound {
-        print("Config file not found")
-        exit(1)
-    }
-    catch {
-        print("ERROR")
-        exit(1)
-    }
+func removeHosts() throws {
+    let args = try getRemainingArgs()
+    let removed = try lsdmate.removeHosts(args)
+    print ("Removed \(removed) hosts")
 }
 
 func getRemainingArgs() throws  -> [String] {
@@ -223,45 +71,55 @@ func getRemainingArgs() throws  -> [String] {
         arguments.append(Process.arguments[i])
     }
     if arguments.count == 0 {
-        throw ErrorCodes.MissingContentArguments
+        throw Errors.MissingContentArguments
     }
     let trimmedArguments = arguments.map({ $0.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())})
     return trimmedArguments
 }
 
-if Process.arguments.count == 1 {
-    showHelp()
-}
-else if Process.arguments.count >= 2 {
-    switch Process.arguments[1] {
-    case "list":
-        listHosts()
-    case "start", "work":
-        startWorking()
-    case "status":
-        showStatus()
-    case "stop", "play":
-        stopWorking()
-    case "add":
-        do {
-            let args = try getRemainingArgs()
-            addHosts(args)
+func main() {
+    do {
+        if Process.arguments.count < 2 {
+            showHelp()
         }
-        catch {
-            print("Missing required host(s)")
-            exit(2)
+        else if Process.arguments.count >= 2 {
+            switch Process.arguments[1] {
+            case "list":
+                try listHosts()
+            case "start", "work":
+                try startWorking()
+            case "status":
+                try showStatus()
+            case "stop", "play":
+                try stopWorking()
+            case "add":
+                try addHosts()
+            case "remove":
+                try removeHosts()
+            default:
+                throw Errors.InvalidArguments
+            }
         }
-    case "remove":
-        do {
-            let args = try getRemainingArgs()
-            removeHosts(args)
-        }
-        catch {
-            print("Missing required host(s)")
-            exit(2)
-        }
-    default:
-        showHelp();
+    }
+    catch  LSDmateErrors.ReadError(let filePath) {
+        print("Cannot read from \(filePath)")
+        exit(1)
+    }
+    catch  LSDmateErrors.WriteError(let filePath) {
+        print("Cannot write to \(filePath)")
+        exit(1)
+    }
+    catch Errors.MissingContentArguments {
+        print("Missing required host(s)")
+        exit(2)
+    }
+    catch Errors.InvalidArguments {
+        print("Invalid arguments")
+        exit(2)
+    }
+    catch (let error){
+        print ("Generic error: \(error)")
+        exit(3)
     }
     
 }
