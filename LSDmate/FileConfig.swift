@@ -14,7 +14,13 @@ class FileConfig: File {
     let writeError = FileError.ConfigFileWrite
     
     func addHosts(args: [String]) throws -> Int {
-        let hosts = try readToArray()
+        var hosts: [String] = []
+        do {
+            hosts = try readToArray()
+        }
+        catch FileError.ConfigFileNotFound {
+            print("Creating \(filePath)")
+        }
         let newContent = Array(Set(hosts).union(args))
         try writeFromArray(newContent)
         return newContent.count - hosts.count

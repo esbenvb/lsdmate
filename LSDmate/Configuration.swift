@@ -10,7 +10,7 @@ import Foundation
 
 let HOSTFILEPATH = "/Users/esben/etc/hosts"
 let BLOCKIP = "127.0.0.1"
-let BLOCKEDFILEPATH = "/Users/esben/.blockedhosts"
+let BLOCKEDFILENAME = ".blockedhosts"
 let STARTSIGNATURE = "#LSDmate hosts START"
 let ENDSIGNATURE = "#LSDmate hosts END"
 
@@ -32,7 +32,7 @@ class Configuration {
 
     init() {
         hostsFile = HOSTFILEPATH
-        configFile = BLOCKEDFILEPATH
+        configFile = "\(NSHomeDirectory())/\(BLOCKEDFILENAME)"
         signature = Signature(start: STARTSIGNATURE, end: ENDSIGNATURE)
         blockedIp = BLOCKIP
     }
