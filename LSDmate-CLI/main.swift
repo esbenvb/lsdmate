@@ -26,9 +26,9 @@ func listHosts() throws {
 
 func showHelp() {
     print ("Usage:")
-    print ("lsdmate status | start/work | stop/play ")
+    print ("sudo lsdmate status | start/work | stop/play ")
     print ("Configuration:")
-    print ("lsdmate list | add host1 [host2, host3] | remove host1 [host2, host3] ")
+    print ("lsdmate list | add host1 [host2 host3] | remove host1 [host2 host3] ")
     exit(0)
 }
 
