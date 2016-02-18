@@ -7,9 +7,13 @@
 //
 
 import Cocoa
+import LSDmate
 
 class ViewController: NSViewController {
 
+    let lsdmate = LSDmate()
+    let alert = NSAlert()
+    
     enum Mode: Int {
         case Play = 0
         case Work = 1
@@ -30,11 +34,38 @@ class ViewController: NSViewController {
         // Do any additional setup after loading the view.
         hostsTable.setDelegate(self)
         hostsTable.setDataSource(self)
+        updateModeSelector(modeSelector)
         
     }
-
+    
     @IBAction func switchMode(sender: NSSegmentedControl) {
-       print(sender.selectedSegment)
+        do {
+            switch sender.selectedSegment {
+            case Mode.Play.rawValue:
+                try lsdmate.disable()
+            case Mode.Work.rawValue:
+                try lsdmate.enable()
+            default:
+                return
+            }
+            updateModeSelector(sender)
+        }
+        catch LSDmateErrors.ReadError(let filePath) {
+            alert.messageText = "Error"
+            alert.informativeText = "read error: \(filePath)"
+            alert.runModal()
+            print("read error: \(filePath)")
+        }
+        catch LSDmateErrors.WriteError(let filePath) {
+            alert.messageText = "Error"
+            alert.informativeText = "write error: \(filePath)"
+            alert.runModal()
+        }
+        catch {
+            alert.messageText = "Error"
+            alert.informativeText = "Unknown error"
+            alert.runModal()
+        }
     }
     
     @IBAction func addHostClicked(sender: NSButton) {
@@ -46,7 +77,26 @@ class ViewController: NSViewController {
     @IBAction func removeHostClicked(sender: NSButton) {
         let rows = hostsTable.selectedRowIndexes
         let selectedHosts = rows.map({hosts[$0]})
-        print(selectedHosts)
+        do {
+            try lsdmate.removeHosts(selectedHosts)
+            print(selectedHosts)
+        }
+        catch LSDmateErrors.ReadError(let filePath) {
+            alert.messageText = "Error"
+            alert.informativeText = "read error: \(filePath)"
+            alert.runModal()
+            print("read error: \(filePath)")
+        }
+        catch LSDmateErrors.WriteError(let filePath) {
+            alert.messageText = "Error"
+            alert.informativeText = "write error: \(filePath)"
+            alert.runModal()
+        }
+        catch {
+            alert.messageText = "Error"
+            alert.informativeText = "Unknown error"
+            alert.runModal()
+        }
     }
     
     override var representedObject: AnyObject? {
@@ -55,10 +105,45 @@ class ViewController: NSViewController {
         }
     }
 
-
+    func updateModeSelector(element: NSSegmentedControl) {
+        do {
+            let status = try lsdmate.status()
+            switch status {
+            case .On:
+                element.selectedSegment = Mode.Work.rawValue
+            case .Off:
+                element.selectedSegment = Mode.Play.rawValue
+            }
+        }
+        catch LSDmateErrors.ReadError(let filePath) {
+            alert.messageText = "Error"
+            alert.informativeText = "read error: \(filePath)"
+            alert.runModal()
+            print("read error: \(filePath)")
+        }
+        catch {
+            alert.messageText = "Error"
+            alert.informativeText = "Unknown error"
+            alert.runModal()
+        }
+    }
+    
     func reloadHosts() {
-        hosts.append("aasdsa\(random())" )
-        hostsTable.reloadData()
+        do {
+            hosts = try lsdmate.listHosts()
+            hostsTable.reloadData()
+        }
+        catch LSDmateErrors.ReadError(let filePath) {
+            alert.messageText = "Error"
+            alert.informativeText = "read error: \(filePath)"
+            alert.runModal()
+            print("read error: \(filePath)")
+        }
+        catch {
+            alert.messageText = "Error"
+            alert.informativeText = "Unknown error"
+            alert.runModal()
+        }
     }
 }
 
@@ -70,20 +155,6 @@ extension ViewController : NSTableViewDataSource {
 }
 
 extension ViewController : NSTableViewDelegate {
-   /*func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let item = hosts[row]
-        
-    let cellIdentifier = "host"
-    let text = item
-    
-    if let cell = tableView.makeViewWithIdentifier(cellIdentifier, owner: self) as? NSTableCellView  {
-        cell.textField?.stringValue = text
-        return cell
-    }
-    return nil
-    }
-   
-*/
     func tableView(tableView: NSTableView, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> AnyObject? {
         return hosts[row]
     }
