@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		901464EE1C78B1A900AE74CB /* AddHostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901464ED1C78B1A900AE74CB /* AddHostViewController.swift */; };
 		909180DF1C6D3960008D3513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909180DE1C6D3960008D3513 /* AppDelegate.swift */; };
 		909180E11C6D3960008D3513 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909180E01C6D3960008D3513 /* ViewController.swift */; };
 		909180E41C6D3960008D3513 /* LSDmate_GUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 909180E21C6D3960008D3513 /* LSDmate_GUI.xcdatamodeld */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		901464ED1C78B1A900AE74CB /* AddHostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHostViewController.swift; sourceTree = "<group>"; };
 		909180DB1C6D3960008D3513 /* LSDmate-GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LSDmate-GUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		909180DE1C6D3960008D3513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		909180E01C6D3960008D3513 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,12 +99,13 @@
 		909180DD1C6D3960008D3513 /* LSDmate-GUI */ = {
 			isa = PBXGroup;
 			children = (
+				901464ED1C78B1A900AE74CB /* AddHostViewController.swift */,
 				909180DE1C6D3960008D3513 /* AppDelegate.swift */,
-				909180E01C6D3960008D3513 /* ViewController.swift */,
 				909180E51C6D3960008D3513 /* Assets.xcassets */,
-				909180E71C6D3960008D3513 /* Main.storyboard */,
 				909180EA1C6D3960008D3513 /* Info.plist */,
 				909180E21C6D3960008D3513 /* LSDmate_GUI.xcdatamodeld */,
+				909180E71C6D3960008D3513 /* Main.storyboard */,
+				909180E01C6D3960008D3513 /* ViewController.swift */,
 			);
 			path = "LSDmate-GUI";
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				901464EE1C78B1A900AE74CB /* AddHostViewController.swift in Sources */,
 				909180E41C6D3960008D3513 /* LSDmate_GUI.xcdatamodeld in Sources */,
 				909180E11C6D3960008D3513 /* ViewController.swift in Sources */,
 				909180DF1C6D3960008D3513 /* AppDelegate.swift in Sources */,
@@ -479,6 +483,7 @@
 				909181051C6D3960008D3513 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		909181061C6D3960008D3513 /* Build configuration list for PBXNativeTarget "LSDmate-GUITests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +492,7 @@
 				909181081C6D3960008D3513 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		909181091C6D3960008D3513 /* Build configuration list for PBXNativeTarget "LSDmate-GUIUITests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +501,7 @@
 				9091810B1C6D3960008D3513 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

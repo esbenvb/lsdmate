@@ -665,6 +665,63 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
+        <!--Add Host View Controller-->
+        <scene sceneID="Pul-cX-F6l">
+            <objects>
+                <viewController id="RJJ-0t-K3N" customClass="AddHostViewController" customModule="LSDmate_GUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="L8G-bB-c1x">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="108"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QOJ-w3-ceo">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="108"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BZH-Dv-mGZ">
+                                        <rect key="frame" x="20" y="66" width="440" height="22"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="BxP-en-SxY">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="99m-38-Nqc">
+                                        <rect key="frame" x="14" y="30" width="95" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Add host" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IRT-rC-IFz">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="addButtonClicked:" target="RJJ-0t-K3N" id="SHa-1F-cXu"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u4l-Do-kjR">
+                                        <rect key="frame" x="109" y="30" width="82" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="csR-Pb-aqp">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" target="RJJ-0t-K3N" id="atk-31-a2z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="hostName" destination="BZH-Dv-mGZ" id="Khj-T7-uXW"/>
+                    </connections>
+                </viewController>
+                <customObject id="cva-Cg-QXY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="533" y="636"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
@@ -686,13 +743,13 @@
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn identifier="" width="152.39453125" minWidth="40" maxWidth="1000" id="nAZ-jY-LnM">
+                                                <tableColumn identifier="" width="235" minWidth="40" maxWidth="1000" id="nAZ-jY-LnM">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Hosts to block">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
-                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="g0J-ve-hmr">
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" title="Text Cell" id="g0J-ve-hmr">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -709,7 +766,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="kqz-bc-v8A">
-                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <rect key="frame" x="-15" y="23" width="16" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="jbO-0m-jKv">
@@ -722,9 +779,12 @@
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8Ae-1P-bsq">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">a</string>
+                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="addHostClicked:" target="XfG-lQ-9wD" id="MU9-N2-2Na"/>
+                                    <segue destination="RJJ-0t-K3N" kind="sheet" id="i72-DW-ZSq"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dNh-k4-z1i">
@@ -732,6 +792,9 @@
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bB8-7U-jAv">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+CA
+</string>
                                 </buttonCell>
                                 <connections>
                                     <action selector="removeHostClicked:" target="XfG-lQ-9wD" id="ee2-LC-C1B"/>
@@ -742,8 +805,8 @@
                                 <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="bEf-8n-mIu">
                                     <font key="font" metaFont="system"/>
                                     <segments>
-                                        <segment label="Play" selected="YES"/>
-                                        <segment label="Work" tag="1"/>
+                                        <segment label="Play" toolTip="When playing, all hosts are available." selected="YES"/>
+                                        <segment label="Work" toolTip="When working, the listed hosts are blocked." tag="1"/>
                                     </segments>
                                     <connections>
                                         <action selector="switchMode:" target="XfG-lQ-9wD" id="iFe-cU-lGo"/>
@@ -753,7 +816,6 @@
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="addHost" destination="xUj-4L-2HK" id="ncg-Yj-kcY"/>
                         <outlet property="hostsTable" destination="8Ga-ex-oFD" id="3Uq-Zy-74x"/>
                         <outlet property="modeSelector" destination="5x5-lv-H6W" id="GNS-Po-roB"/>
                         <outlet property="removeHost" destination="dNh-k4-z1i" id="T8K-9s-F7A"/>

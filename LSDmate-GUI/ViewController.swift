@@ -35,6 +35,7 @@ class ViewController: NSViewController {
         hostsTable.setDelegate(self)
         hostsTable.setDataSource(self)
         updateModeSelector(modeSelector)
+        reloadHosts()
         
     }
     
@@ -68,18 +69,18 @@ class ViewController: NSViewController {
         }
     }
     
-    @IBAction func addHostClicked(sender: NSButton) {
-        reloadHosts()
-        print(hosts)
-
-    }
+    
+    
+    
+    
     
     @IBAction func removeHostClicked(sender: NSButton) {
         let rows = hostsTable.selectedRowIndexes
         let selectedHosts = rows.map({hosts[$0]})
         do {
-            try lsdmate.removeHosts(selectedHosts)
             print(selectedHosts)
+            try lsdmate.removeHosts(selectedHosts)
+            reloadHosts()
         }
         catch LSDmateErrors.ReadError(let filePath) {
             alert.messageText = "Error"
@@ -105,6 +106,29 @@ class ViewController: NSViewController {
         }
     }
 
+    func addHost(host: String) {
+        do {
+            try lsdmate.addHosts([host])
+            reloadHosts()
+        }
+        catch LSDmateErrors.ReadError(let filePath) {
+            alert.messageText = "Error"
+            alert.informativeText = "read error: \(filePath)"
+            alert.runModal()
+            print("read error: \(filePath)")
+        }
+        catch LSDmateErrors.WriteError(let filePath) {
+            alert.messageText = "Error"
+            alert.informativeText = "write error: \(filePath)"
+            alert.runModal()
+        }
+        catch {
+            alert.messageText = "Error"
+            alert.informativeText = "Unknown error"
+            alert.runModal()
+        }
+    }
+    
     func updateModeSelector(element: NSSegmentedControl) {
         do {
             let status = try lsdmate.status()
