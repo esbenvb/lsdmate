@@ -69,7 +69,12 @@ public class LSDmate  {
     
     public func removeHosts(hosts: [String]) throws -> Int  {
         do {
-            return try hostsFile.configFile.removeHosts(hosts)
+            let changes = try hostsFile.configFile.removeHosts(hosts)
+            let currentStatus = try status()
+            if changes > 0 && currentStatus == .On {
+                try enable()
+            }
+            return changes
         }
         catch FileError.ConfigFileNotFound {
             throw LSDmateErrors.ReadError(filePath: Configuration.configFile)
@@ -81,7 +86,12 @@ public class LSDmate  {
     
     public func addHosts(hosts: [String]) throws -> Int  {
         do {
-            return try hostsFile.configFile.addHosts(hosts)
+            let changes = try hostsFile.configFile.addHosts(hosts)
+            let currentStatus = try status()
+            if changes > 0 && currentStatus == .On {
+                try enable()
+            }
+            return changes
         }
         catch FileError.ConfigFileNotFound {
             throw LSDmateErrors.ReadError(filePath: Configuration.configFile)
