@@ -726,7 +726,7 @@ Gw
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="LSDmate_GUI" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
+                    <view key="view" id="m2S-Jp-Qdl" customClass="MainView" customModule="LSDmate_GUI" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="280" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -736,7 +736,7 @@ Gw
                                     <rect key="frame" x="1" y="0.0" width="238" height="134"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" autosaveColumns="NO" headerView="jbO-0m-jKv" id="8Ga-ex-oFD">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" autosaveColumns="NO" headerView="jbO-0m-jKv" id="8Ga-ex-oFD" customClass="HostsTableView" customModule="LSDmate_GUI" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="238" height="111"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -817,6 +817,7 @@ CA
                     </view>
                     <connections>
                         <outlet property="hostsTable" destination="8Ga-ex-oFD" id="3Uq-Zy-74x"/>
+                        <outlet property="mainView" destination="m2S-Jp-Qdl" id="BzX-9G-GKF"/>
                         <outlet property="modeSelector" destination="5x5-lv-H6W" id="GNS-Po-roB"/>
                         <outlet property="removeHost" destination="dNh-k4-z1i" id="T8K-9s-F7A"/>
                     </connections>

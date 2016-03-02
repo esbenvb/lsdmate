@@ -21,6 +21,7 @@ class ViewController: NSViewController {
     
     var hosts = ["hej", "med", "dig"]
     
+    @IBOutlet var mainView: MainView!
     @IBOutlet weak var modeSelector: NSSegmentedControl!
     @IBOutlet weak var addHost: NSButton!
     @IBOutlet weak var removeHost: NSButton!
@@ -34,6 +35,7 @@ class ViewController: NSViewController {
         // Do any additional setup after loading the view.
         hostsTable.setDelegate(self)
         hostsTable.setDataSource(self)
+        mainView.parentViewController = self
         updateModeSelector(modeSelector)
         reloadHosts()
         
@@ -169,6 +171,37 @@ class ViewController: NSViewController {
             alert.runModal()
         }
     }
+    
+    class func hostFromUrl(urlString: String?) -> String? {
+        let url = NSURL(string: urlString!)
+        return url?.host
+    }
+        /*do {
+            let matches = try NSRegularExpression(pattern: "^https?:\\/\\/([^\\/]*)", options: .CaseInsensitive).matchesInString(url, options: NSMatchingOptions(), range: NSMakeRange(0, content.characters.count))
+            
+            guard let range =  matches.first?.rangeAtIndex(1) else { return }
+            guard let swiftRange = rangeFromNSRange(range, forString: content) else {return}
+            hostName.stringValue = content.substringWithRange(swiftRange)
+            
+        }
+        catch {
+            print("regex error")
+        }
+        
+        // Do view setup here.
+    }
+    func rangeFromNSRange(nsRange: NSRange, forString str: String) -> Range<String.Index>? {
+        let fromUTF16 = str.utf16.startIndex.advancedBy(nsRange.location, limit: str.utf16.endIndex)
+        let toUTF16 = fromUTF16.advancedBy(nsRange.length, limit: str.utf16.endIndex)
+        
+        
+        if let from = String.Index(fromUTF16, within: str),
+            let to = String.Index(toUTF16, within: str) {
+                return from ..< to
+        }
+        
+        return nil
+    }*/
 }
 
 
