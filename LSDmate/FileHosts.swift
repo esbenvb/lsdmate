@@ -14,25 +14,27 @@ class FileHosts: File {
     let readError = FileError.HostsFileNotFound
     let writeError = FileError.HostsFileWrite
     let configFile: FileConfig
+    lazy var userHostsFile: FileUserHosts = FileUserHosts(hostsFile: self)
     
     init(configFile: FileConfig) {
         self.configFile = configFile
     }
     
     func enable() throws {
-        try disable()
-        let hostsFileLines = try readToArray()
+        try disableInternal()
+        // Read the user hosts file since it's been updated by the internal disable.
+        let hostsFileLines = try userHostsFile.readToArray()
         let hosts = try configFile.listHosts()
         let newLines = [
             STARTSIGNATURE,
             "\(BLOCKIP) \(hosts.joinWithSeparator(" "))",
             ENDSIGNATURE,
         ]
-        try writeFromArray(hostsFileLines + newLines)
+        try userHostsFile.writeFromArray(hostsFileLines + newLines)
+        try userHostsFile.commit()
     }
     
-    
-    func disable() throws {
+    private func disableInternal() throws {
         let hostsFileLines = try readToArray()
         var newLines: [String] = []
         var inBlock = false
@@ -48,7 +50,12 @@ class FileHosts: File {
                 }
             }
         }
-        try writeFromArray(newLines)
+        try userHostsFile.writeFromArray(newLines)
+    }
+    
+    func disable() throws {
+        try disableInternal()
+        try userHostsFile.commit()
     }
     
     func status() throws -> LSDmateStatus {

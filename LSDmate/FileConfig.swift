@@ -34,7 +34,13 @@ class FileConfig: File {
     }
     
     func listHosts() throws -> [String]  {
-        let hosts = try readToArray()
-        return hosts
+        do {
+            let hosts = try readToArray()
+            return hosts
+        }
+        catch FileError.ConfigFileNotFound {
+            print("No config file found. List is empty. \(filePath)")
+            return []
+        }
     }
 }

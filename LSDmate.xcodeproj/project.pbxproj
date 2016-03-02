@@ -17,6 +17,7 @@
 		9091812A1C6E8BD3008D3513 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909181291C6E8BD3008D3513 /* Configuration.swift */; };
 		9091812C1C6E8E3E008D3513 /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9091812B1C6E8E3E008D3513 /* Signature.swift */; };
 		9091812E1C6EA2B0008D3513 /* LSDmate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9091812D1C6EA2B0008D3513 /* LSDmate.swift */; };
+		90C0D2151C87703E002367DD /* FileUserHosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C0D2141C87703E002367DD /* FileUserHosts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,13 @@
 			remoteGlobalIDString = 909180FA1C6D3960008D3513;
 			remoteInfo = "LSDmate-GUIUITests";
 		};
+		90C0D2121C864FBD002367DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90C0D20E1C864FBD002367DD /* LSDmate-Helper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 90C0D2041C864FBD002367DD;
+			remoteInfo = "LSDmate-Helper";
+		};
 		90F4CBF11C7655CD00941040 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 909BED431C71359000DB9F45 /* LSDmate-CLI.xcodeproj */;
@@ -73,6 +81,8 @@
 		9091812D1C6EA2B0008D3513 /* LSDmate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSDmate.swift; sourceTree = "<group>"; };
 		909BED431C71359000DB9F45 /* LSDmate-CLI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "LSDmate-CLI.xcodeproj"; sourceTree = "<group>"; };
 		909BED461C71359000DB9F45 /* LSDmate-GUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "LSDmate-GUI.xcodeproj"; sourceTree = "<group>"; };
+		90C0D20E1C864FBD002367DD /* LSDmate-Helper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "LSDmate-Helper.xcodeproj"; path = "LSDmate-Helper/LSDmate-Helper.xcodeproj"; sourceTree = "<group>"; };
+		90C0D2141C87703E002367DD /* FileUserHosts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUserHosts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,7 @@
 		909180271C6D3812008D3513 = {
 			isa = PBXGroup;
 			children = (
+				90C0D20E1C864FBD002367DD /* LSDmate-Helper.xcodeproj */,
 				909180331C6D3812008D3513 /* LSDmate */,
 				9091803F1C6D3812008D3513 /* LSDmateTests */,
 				909180321C6D3812008D3513 /* Products */,
@@ -117,15 +128,16 @@
 		909180331C6D3812008D3513 /* LSDmate */ = {
 			isa = PBXGroup;
 			children = (
-				909180341C6D3812008D3513 /* LSDmate.h */,
-				909180361C6D3812008D3513 /* Info.plist */,
-				9091811F1C6E8619008D3513 /* FileHosts.swift */,
+				909181291C6E8BD3008D3513 /* Configuration.swift */,
+				909181271C6E8A9F008D3513 /* ErrorTypeEnum.swift */,
 				909181211C6E8640008D3513 /* File.swift */,
 				909181231C6E866A008D3513 /* FileConfig.swift */,
-				909181271C6E8A9F008D3513 /* ErrorTypeEnum.swift */,
-				909181291C6E8BD3008D3513 /* Configuration.swift */,
-				9091812B1C6E8E3E008D3513 /* Signature.swift */,
+				9091811F1C6E8619008D3513 /* FileHosts.swift */,
+				90C0D2141C87703E002367DD /* FileUserHosts.swift */,
+				909180361C6D3812008D3513 /* Info.plist */,
+				909180341C6D3812008D3513 /* LSDmate.h */,
 				9091812D1C6EA2B0008D3513 /* LSDmate.swift */,
+				9091812B1C6E8E3E008D3513 /* Signature.swift */,
 			);
 			path = LSDmate;
 			sourceTree = "<group>";
@@ -145,6 +157,14 @@
 				909BED501C71359000DB9F45 /* LSDmate-GUI.app */,
 				909BED521C71359000DB9F45 /* LSDmate-GUITests.xctest */,
 				909BED541C71359000DB9F45 /* LSDmate-GUIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90C0D20F1C864FBD002367DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90C0D2131C864FBD002367DD /* LSDmate-Helper */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,6 +264,10 @@
 					ProductGroup = 909BED471C71359000DB9F45 /* Products */;
 					ProjectRef = 909BED461C71359000DB9F45 /* LSDmate-GUI.xcodeproj */;
 				},
+				{
+					ProductGroup = 90C0D20F1C864FBD002367DD /* Products */;
+					ProjectRef = 90C0D20E1C864FBD002367DD /* LSDmate-Helper.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -273,6 +297,13 @@
 			fileType = wrapper.cfbundle;
 			path = "LSDmate-GUIUITests.xctest";
 			remoteRef = 909BED531C71359000DB9F45 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		90C0D2131C864FBD002367DD /* LSDmate-Helper */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "LSDmate-Helper";
+			remoteRef = 90C0D2121C864FBD002367DD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		90F4CBF21C7655CD00941040 /* LSDmate-CLI */ = {
@@ -312,6 +343,7 @@
 				9091812C1C6E8E3E008D3513 /* Signature.swift in Sources */,
 				909181241C6E866A008D3513 /* FileConfig.swift in Sources */,
 				909181201C6E8619008D3513 /* FileHosts.swift in Sources */,
+				90C0D2151C87703E002367DD /* FileUserHosts.swift in Sources */,
 				909181221C6E8640008D3513 /* File.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

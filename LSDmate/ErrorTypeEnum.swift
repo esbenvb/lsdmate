@@ -14,5 +14,7 @@ enum FileError: ErrorType {
     case FileReadError
     case ConfigFileNotFound
     case ConfigFileWrite
+    case UserHostsFileNotFound
+    case UserHostsFileWrite
 }
 

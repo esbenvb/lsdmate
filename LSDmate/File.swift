@@ -36,4 +36,22 @@ extension File {
             throw writeError
         }
     }
+    
+    internal func read() throws -> String {
+        do {
+            let fileContent = try String(contentsOfFile: filePath, encoding: NSUTF8StringEncoding)
+            return fileContent
+        } catch  {
+            throw readError
+        }
+    }
+    
+    internal func write(fileContent: String) throws {
+        do {
+            try fileContent.writeToFile(filePath, atomically: true, encoding: NSUTF8StringEncoding)
+        }
+        catch {
+            throw writeError
+        }
+    }
 }

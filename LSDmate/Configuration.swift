@@ -8,13 +8,16 @@
 
 import Foundation
 
-let HOSTFILEPATH = "/Users/esben/etc/hosts"
+let HOSTFILEPATH = "/etc/hosts"
 let BLOCKIP = "127.0.0.1"
-let BLOCKEDFILENAME = ".blockedhosts"
+let CONFIGFILE = "\(NSHomeDirectory())/.lsdmate_blockedhosts"
+let USERHOSTSFILE = "\(NSHomeDirectory())/.hosts"
+
 let STARTSIGNATURE = "#LSDmate hosts START"
 let ENDSIGNATURE = "#LSDmate hosts END"
 
 class Configuration {
+    class var userHostsFile: String {return sharedInstance.userHostsFile}
     class var hostsFile: String {return sharedInstance.hostsFile}
     class var configFile: String {return sharedInstance.configFile}
     class var signature: Signature {return sharedInstance.signature}
@@ -25,19 +28,23 @@ class Configuration {
         return Singleton.instance
     }
 
+    let userHostsFile: String
     let hostsFile: String
     let configFile: String
     let signature: Signature
     let blockedIp: String
 
+    
     init() {
+        userHostsFile = USERHOSTSFILE
         hostsFile = HOSTFILEPATH
-        configFile = "\(NSHomeDirectory())/\(BLOCKEDFILENAME)"
+        configFile = CONFIGFILE
         signature = Signature(start: STARTSIGNATURE, end: ENDSIGNATURE)
         blockedIp = BLOCKIP
     }
     
-    init(hostsFile: String, configFile: String, blockedIp: String) {
+    init(userHostsFile: String, hostsFile: String, configFile: String, blockedIp: String) {
+        self.userHostsFile = userHostsFile
         self.hostsFile = hostsFile
         self.configFile = configFile
         self.blockedIp = blockedIp
