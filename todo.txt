@@ -1,0 +1,5 @@
+Make top tray icon instead of dock icon
+Make modal from top tray
+Make auto start app on boot
+Fix installing helper tool
+Fix installing command line tool

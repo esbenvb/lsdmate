@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C509CF552B2E95EE7291498 /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5C5096240B8DD00D68C5A8E7 /* todo.txt */; };
 		909180351C6D3812008D3513 /* LSDmate.h in Headers */ = {isa = PBXBuildFile; fileRef = 909180341C6D3812008D3513 /* LSDmate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9091803C1C6D3812008D3513 /* LSDmate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 909180311C6D3812008D3513 /* LSDmate.framework */; };
 		909180411C6D3812008D3513 /* LSDmateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909180401C6D3812008D3513 /* LSDmateTests.swift */; };
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C5096240B8DD00D68C5A8E7 /* todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
 		909180311C6D3812008D3513 /* LSDmate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LSDmate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		909180341C6D3812008D3513 /* LSDmate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSDmate.h; sourceTree = "<group>"; };
 		909180361C6D3812008D3513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				909180321C6D3812008D3513 /* Products */,
 				909BED431C71359000DB9F45 /* LSDmate-CLI.xcodeproj */,
 				909BED461C71359000DB9F45 /* LSDmate-GUI.xcodeproj */,
+				5C5096240B8DD00D68C5A8E7 /* todo.txt */,
 			);
 			sourceTree = "<group>";
 		};
@@ -320,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C509CF552B2E95EE7291498 /* todo.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

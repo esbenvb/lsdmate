@@ -21,7 +21,7 @@ class FileUserHosts: File {
     // Copy
     func commit() throws -> Int32 {
         let task = NSTask()
-        task.launchPath = "LSDmate-Helper"
+        task.launchPath = "/usr/local/bin/LSDmate-Helper"
         task.launch()
         task.waitUntilExit()
         return task.terminationStatus
