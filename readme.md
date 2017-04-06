@@ -1,4 +1,4 @@
-LSD Mate (sort for Lack of Self Discipline)
+LSD Mate (short for Lack of Self Discipline)
 
 A tool for macOS, for blocking websites that distracts your work attention.
 
